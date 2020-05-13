@@ -75,17 +75,17 @@ exports.config = merge(wdioConf.config, {
     capabilities: [
          // { browserName: 'firefox'},
         // { browserName: 'MicrosoftEdge',maxInstances: 5},
-        // { browserName: 'chrome',
-        //     "goog:chromeOptions": {
-        //     prefs: {'credentials_enable_service': false, 'profile': {'password_manager_enabled': false}, 'w3c': true},
-        //     args: ['--start-maximized', '--disable-cache', '--disable-application-cache',
-        //         '--disable-offline-load-stale-cache', '--disk-cache-size=0',
-        //         '--v8-cache-options=off', '--disable-infobars']
-        //     },
-        // },
+        { browserName: 'chrome',
+            "goog:chromeOptions": {
+            prefs: {'credentials_enable_service': false, 'profile': {'password_manager_enabled': false}, 'w3c': true},
+            args: ['--start-maximized', '--disable-cache', '--disable-application-cache',
+                '--disable-offline-load-stale-cache', '--disk-cache-size=0',
+                '--v8-cache-options=off', '--disable-infobars']
+            },
+        },
         // { browserName: 'internet explorer', "browserVersion" : '10',
-        { browserName: 'internet explorer', "browserVersion" : '11',
-       maxInstances: 5},
+//         { browserName: 'internet explorer', "browserVersion" : '11',
+//        maxInstances: 5},
     ],
     specs: [
         // './features/*.feature',   //this doesn't seem to work either - picks one feature file at random to run
